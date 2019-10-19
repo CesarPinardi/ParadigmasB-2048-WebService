@@ -70,7 +70,7 @@ public class Server {
             */
             System.out.println("Treating...");
             String msg = input.readUTF();
-            System.out.println("Msg delivered: " + msg);
+            System.out.println("Msg from client: " + msg);
             output.writeUTF("Hello World!");
             output.flush();
             
