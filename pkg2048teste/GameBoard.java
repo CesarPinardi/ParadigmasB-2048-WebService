@@ -341,7 +341,7 @@ public class GameBoard {
         
         int dir;
         do {            
-            System.out.print("Dir:");
+            System.out.print("Direction (1-Left, 2-Right, 3-Up, 4-Down, 0- Sair): ");
 
             dir = ler.nextInt();
 
@@ -350,6 +350,7 @@ public class GameBoard {
                 chamadaWSLeft = "http://localhost:8080/WebService2048/webresources/generic/Usuario/2048/left";
 
                 String json = http.sendGet(chamadaWSLeft);
+                System.out.println("Json: " + json);
                 moveTiles(Direction.LEFT);
                 if(!hasStarted) hasStarted = true;
             }
@@ -358,6 +359,7 @@ public class GameBoard {
                 chamadaWSRight = "http://localhost:8080/WebService2048/webresources/generic/Usuario/2048/right";
 
                 String json = http.sendGet(chamadaWSRight);
+                System.out.println("Json: " + json);
                 moveTiles(Direction.RIGHT);
                 if(!hasStarted) hasStarted = true;
             }
@@ -366,6 +368,7 @@ public class GameBoard {
                 chamadaWSUp = "http://localhost:8080/WebService2048/webresources/generic/Usuario/2048/up";
 
                 String json = http.sendGet(chamadaWSUp);
+                System.out.println("Json: " + json);
                 moveTiles(Direction.UP);
                 if(!hasStarted) hasStarted = true;
             }
@@ -374,6 +377,7 @@ public class GameBoard {
                 chamadaWSDown = "http://localhost:8080/WebService2048/webresources/generic/Usuario/2048/down";
 
                 String json = http.sendGet(chamadaWSDown);
+                System.out.println("Json: " + json);
                 moveTiles(Direction.DOWN);
                 if(!hasStarted) hasStarted = true;
             }
